@@ -139,7 +139,7 @@ wget <file>              # downloads file
 # VARIABLES
 ##############################################################################
 
-
+read name                    # input value into $name  ie echo $name
 varname=value                # defines a variable
 varname=value command        # defines a variable to be in the environment of a particular subprocess
 echo $varname                # checks a variable's value
