@@ -211,8 +211,8 @@ declare -f          # displays all defined functions in your login session
 ##############################################################################
 # FLOW CONTROLS
 ##############################################################################
-
-
+git commit && git push
+git commit || echo "Commit failed"
 statement1 && statement2  # and operator
 statement1 || statement2  # or operator
 
