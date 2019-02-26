@@ -87,7 +87,15 @@ $(UNIX command)              # command substitution: runs the command and return
 function functname() {
   shell commands
 }
+or
 
+hello(){     # define function
+echo hello
+}
+
+hello  # returns hello
+
+typeset -f shows all functions defined in current shell
 unset -f functname  # deletes a function definition
 declare -f          # displays all defined functions in your login session
 
@@ -259,16 +267,6 @@ cd; nano .bashrc
 
 source .bashrc
 cd $websites
-
-Functions
-$hello(){     # define function
-echo hello
-}
-
-$hello  # returns hello
-
-typeset -f shows all functions defined in current shell
-
 ##############################################################################
 # DEBUGGING SHELL PROGRAMS
 ##############################################################################
