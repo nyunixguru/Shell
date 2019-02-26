@@ -23,10 +23,7 @@ ln -s <filename> <link>       # creates symbolic link to file
 ##############################################################################
 # DIRECTORY COMMANDS
 ##############################################################################
-mkdir <dirname>  # makes a new directory
-cd               # changes to home
-cd <dirname>     # changes directory
-pwd              # tells you where you currently are
+
 ##############################################################################
 # SSH, SYSTEM INFO & NETWORK COMMANDS
 ##############################################################################
