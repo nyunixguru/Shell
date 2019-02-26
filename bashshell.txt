@@ -185,7 +185,7 @@ do
   statements that can use $name
 done
 
-while condition; do  #while (( $n < 5 )); do
+while condition; do  #while (( $n < 5 )); do echo $n; n=`expr $n + 1`; done
   statements
 done
 
