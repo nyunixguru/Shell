@@ -27,46 +27,27 @@ clear               # clears content on window (hide displayed lines)
 # FILE COMMANDS
 ##############################################################################
 
-
-
 ln -s <filename> <link>       # creates symbolic link to file
-
-
 
 
 ##############################################################################
 # DIRECTORY COMMANDS
 ##############################################################################
 
-
 mkdir <dirname>  # makes a new directory
 cd               # changes to home
 cd <dirname>     # changes directory
 pwd              # tells you where you currently are
-
-
 ##############################################################################
 # SSH, SYSTEM INFO & NETWORK COMMANDS
 ##############################################################################
-
-
 ssh user@host            # connects to host as user
 ssh -p <port> user@host  # connects to host on specified port as user
 ssh-copy-id user@host    # adds your ssh key to host for user to enable a keyed or passwordless login
-
-whoami                   # returns your username
-passwd                   # lets you change your password
-quota -v                 # shows what your disk quota is
-date                     # shows the current date and time
-cal                      # shows the month's calendar
-
-man <command>            # shows the manual for specified command
-
 whois <domain>           # gets whois information for domain
 dig <domain>             # gets DNS information for domain
 dig -x <host>            # reverses lookup host
 wget <file>              # downloads file
-
 
 ##############################################################################
 # VARIABLES
