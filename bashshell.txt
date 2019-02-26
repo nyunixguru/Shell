@@ -10,30 +10,19 @@ man -k        #search man pages by keyword
 ##############################################################################
 # BASH BASICS
 ##############################################################################
-
 env                 # displays all environment variables
-
 echo $SHELL         # displays the shell you're using
 echo $BASH_VERSION  # displays bash version
-
 bash                # if you want to use bash (type exit to go back to your previously opened shell)
 whereis bash        # finds out where bash is on your system
 which bash          # finds out which program is executed as 'bash' (default: /bin/bash, can change across environments)
-
-clear               # clears content on window (hide displayed lines)
-
-
 ##############################################################################
 # FILE COMMANDS
 ##############################################################################
-
 ln -s <filename> <link>       # creates symbolic link to file
-
-
 ##############################################################################
 # DIRECTORY COMMANDS
 ##############################################################################
-
 mkdir <dirname>  # makes a new directory
 cd               # changes to home
 cd <dirname>     # changes directory
@@ -48,11 +37,9 @@ whois <domain>           # gets whois information for domain
 dig <domain>             # gets DNS information for domain
 dig -x <host>            # reverses lookup host
 wget <file>              # downloads file
-
 ##############################################################################
 # VARIABLES
 ##############################################################################
-
 read name                    # input value into $name  ie echo $name
 varname=value                # defines a variable
 varname=value command        # defines a variable to be in the environment of a particular subprocess
@@ -73,13 +60,6 @@ ${#array[i]}                 # to find out the length of any element in the arra
 ${#array[@]}                 # to find out how many values there are in the array
 ${array[@]}                  # print all values of the array
 ${array[*]}                  # print all values of the array
-
-declare -a                   # the variables are treaded as arrays
-declare -f                   # uses function names only
-declare -F                   # displays function names without definitions
-declare -i                   # the variables are treaded as integers
-declare -r                   # makes the variables read-only
-declare -x                   # marks the variables for export via the environment
 
 ${varname:-word}             # if varname exists and isn't null, return its value; otherwise return word
 ${varname:=word}             # if varname exists and isn't null, return its value; otherwise set it word and then return its value
@@ -104,15 +84,11 @@ ${#varname}                  # returns the length of the value of the variable a
 
 $(UNIX command)              # command substitution: runs the command and returns standard output
 
-
 ##############################################################################
 # FUNCTIONS
 ##############################################################################
-
-
 # The function refers to passed arguments by position (as if they were positional parameters), that is, $1, $2, and so forth.
 # $@ is equal to "$1" "$2"... "$N", where N is the number of positional parameters. $# holds the number of positional parameters.
-
 
 function functname() {
   shell commands
@@ -120,7 +96,6 @@ function functname() {
 
 unset -f functname  # deletes a function definition
 declare -f          # displays all defined functions in your login session
-
 
 ##############################################################################
 # FLOW CONTROLS
@@ -216,7 +191,6 @@ done
 # COMMAND-LINE PROCESSING CYCLE
 ##############################################################################
 
-
 # The default order for command lookup is functions, followed by built-ins, with scripts and executables last.
 # There are three built-ins that you can use to override this order: `command`, `builtin` and `enable`.
 
@@ -266,17 +240,9 @@ n<&-       # closes the input from file descripor n
 myCommand &  # runs job in the background and prompts back the shell
 
 jobs         # lists all jobs (use with -l to see associated PID)
-
 fg           # brings a background job into the foreground
-fg %+        # brings most recently invoked background job
-fg %-        # brings second most recently invoked background job
-fg %N        # brings job number N
-fg %string   # brings job whose command begins with string
-fg %?string  # brings job whose command contains string
-
 kill -l      # returns a list of all signals on the system, by name and number
 kill PID     # terminates process with specified PID
-
 ps           # prints a line of information about the current running login shell and any processes running under it
 ps -a        # selects all processes with a tty except session leaders
 
@@ -293,9 +259,7 @@ wait                # waits until all background jobs have finished
 # TIPS & TRICKS
 ##############################################################################
 
-
 # set an alias
-cd; nano .bash_profile
 > alias gentlenode='ssh admin@gentlenode.com -p 3404'  # add your alias in .bash_profile
 
 # to quickly go to a specific directory
@@ -305,7 +269,6 @@ cd; nano .bashrc
 
 source .bashrc
 cd $websites
-
 
 ##############################################################################
 # DEBUGGING SHELL PROGRAMS
