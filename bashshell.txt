@@ -229,8 +229,6 @@ n<&-       # closes the input from file descripor n
 ##############################################################################
 # PROCESS HANDLING
 ##############################################################################
-
-
 # To suspend a job, type CTRL+Z while it is running. You can also suspend a job with CTRL+Y.
 # This is slightly different from CTRL+Z in that the process is only stopped when it attempts to read input from terminal.
 # Of course, to interrupt a job, type CTRL+C.
@@ -244,8 +242,6 @@ trap - sig1 sig2    # resets the action taken when the signal is received to the
 disown <PID|JID>    # removes the process from the list of jobs
 
 wait                # waits until all background jobs have finished
-
-
 ##############################################################################
 # TIPS & TRICKS
 ##############################################################################
@@ -257,7 +253,6 @@ wait                # waits until all background jobs have finished
 cd; nano .bashrc
 > shopt -s cdable_vars
 > export websites="/Users/mac/Documents/websites"
-
 source .bashrc
 cd $websites
 ##############################################################################
