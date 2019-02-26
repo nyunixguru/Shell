@@ -138,12 +138,16 @@ file1 -ot file2           # file1 is older than file2
 
 # NUMBERS
 
--lt                       # less than  if [ $i -lt 4 ]; then echo hello; fi
+-lt                       # less than  
 -le                       # less than or equal
 -eq                       # equal
 -ge                       # greater than or equal
 -gt                       # greater than
 -ne                       # not equal 
+
+Examples
+if [ $i -lt 4 ]; then echo hello; fi
+if [ -f /etc/passwd ]  && [ -f /etc/shadow ] ; then echo hello; fi
 
 if condition
 then
