@@ -138,14 +138,13 @@ file1 -ot file2           # file1 is older than file2
 
 # NUMBERS
 
--lt                       # less than
+-lt                       # less than  if [ $i -lt 4 ]; then echo hello; fi
 -le                       # less than or equal
 -eq                       # equal
 -ge                       # greater than or equal
 -gt                       # greater than
--ne                       # not equal
+-ne                       # not equal 
 
-if [ $i -lt 4 ]; then echo hello; fi
 if condition
 then
   statements
@@ -237,13 +236,6 @@ n<&-       # closes the input from file descripor n
 # Of course, to interrupt a job, type CTRL+C.
 
 myCommand &  # runs job in the background and prompts back the shell
-
-jobs         # lists all jobs (use with -l to see associated PID)
-fg           # brings a background job into the foreground
-kill -l      # returns a list of all signals on the system, by name and number
-kill PID     # terminates process with specified PID
-ps           # prints a line of information about the current running login shell and any processes running under it
-ps -a        # selects all processes with a tty except session leaders
 
 trap cmd sig1 sig2  # executes a command when a signal is received by the script
 trap "" sig1 sig2   # ignores that signals
