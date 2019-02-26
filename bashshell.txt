@@ -10,12 +10,10 @@ man -k        #search man pages by keyword
 ##############################################################################
 # BASH BASICS
 ##############################################################################
+echo 'PS1="\u \!—> " ' >> ~/.bash_profile
 env                 # displays all environment variables
 echo $SHELL         # displays the shell you're using
 echo $BASH_VERSION  # displays bash version
-bash                # if you want to use bash (type exit to go back to your previously opened shell)
-whereis bash        # finds out where bash is on your system
-which bash          # finds out which program is executed as 'bash' (default: /bin/bash, can change across environments)
 ##############################################################################
 # FILE COMMANDS
 ##############################################################################
@@ -33,7 +31,6 @@ ssh-copy-id user@host    # adds your ssh key to host for user to enable a keyed 
 whois <domain>           # gets whois information for domain
 dig <domain>             # gets DNS information for domain
 dig -x <host>            # reverses lookup host
-wget <file>              # downloads file
 ##############################################################################
 # VARIABLES
 ##############################################################################
@@ -194,14 +191,10 @@ done
 command  # removes alias and function lookup. Only built-ins and commands found in the search path are executed
 builtin  # looks up only built-in commands, ignoring functions and commands found in PATH
 enable   # enables and disables shell built-ins
-
 eval     # takes arguments and run them through the command-line processing steps all over again
-
-
 ##############################################################################
 # INPUT/OUTPUT REDIRECTORS
 ##############################################################################
-
 
 cmd1|cmd2  # pipe; takes standard output of cmd1 as standard input to cmd2
 < file     # takes standard input from file
