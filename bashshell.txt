@@ -260,11 +260,18 @@ cd; nano .bashrc
 source .bashrc
 cd $websites
 
+Functions
+$hello(){     # define function
+echo hello
+}
+
+$hello  # returns hello
+
+typeset -f shows all functions defined in current shell
+
 ##############################################################################
 # DEBUGGING SHELL PROGRAMS
 ##############################################################################
-
-
 bash -n scriptname  # don't run commands; check for syntax errors only
 set -o noexec       # alternative (set option in script)
 
