@@ -125,8 +125,9 @@ declare -f          # displays all defined functions in your login session
 ##############################################################################
 # FLOW CONTROLS
 ##############################################################################
-git commit && git push
+git commit && git push  # git push only if commit successful
 git commit || echo "Commit failed"
+test  -f /etc/passw || echo hello  #returns hello
 statement1 && statement2  # and operator
 statement1 || statement2  # or operator
 
