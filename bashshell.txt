@@ -22,8 +22,6 @@ ln -s <filename> <link>       # creates symbolic link to file
 ##############################################################################
 # SSH, SYSTEM INFO & NETWORK COMMANDS
 ##############################################################################
-ssh user@host            # connects to host as user
-ssh -p <port> user@host  # connects to host on specified port as user
 ssh-copy-id user@host    # adds your ssh key to host for user to enable a keyed or passwordless login
 whois <domain>           # gets whois information for domain
 dig <domain>             # gets DNS information for domain
@@ -135,12 +133,12 @@ file1 -ot file2           # file1 is older than file2
 
 # NUMBERS
 
--lt                       # less than  
+-lt                       # less than
 -le                       # less than or equal
 -eq                       # equal
 -ge                       # greater than or equal
 -gt                       # greater than
--ne                       # not equal 
+-ne                       # not equal
 
 Examples
 if [ $i -lt 4 ]; then echo hello; fi
@@ -260,7 +258,7 @@ function errtrap {
   echo "ERROR line $1: Command exited with status $es."
 }
 
-trap 'errtrap $LINENO' ERR  # is run whenever a command in the surrounding script or function exits with non-zero status 
+trap 'errtrap $LINENO' ERR  # is run whenever a command in the surrounding script or function exits with non-zero status
 
 function dbgtrap {
   echo "badvar is $badvar"
