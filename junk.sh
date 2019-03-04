@@ -2,7 +2,7 @@
 
 echo hellokitty
 echo hellokitty
-echo newsd
+echo newsday
 echo "$@"
 
 
